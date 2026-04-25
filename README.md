@@ -103,7 +103,35 @@ The API will be available at `http://localhost:5000`
 
 **To deactivate virtual environment**: Type `deactivate` in your terminal
 
+### Testing the API
+
+You can test the API endpoints using:
+- Browser: `http://localhost:5000` (GET requests only)
+- cURL: `curl http://localhost:5000/tasks`
+- Postman: Import the endpoints and test
+- Python: Use the `requests` library
+
+Start with the welcome page at `http://localhost:5000` to see all available endpoints.
+
 ## API Endpoints
+
+### Welcome Endpoint
+**GET** `/`
+```json
+Response (200):
+{
+  "message": "Welcome to Task Management System API",
+  "version": "1.0.0",
+  "endpoints": {
+    "GET /": "This welcome message",
+    "GET /tasks": "List all tasks",
+    "POST /tasks": "Create a new task",
+    "GET /tasks/{id}": "Get a specific task",
+    "PATCH /tasks/{id}/toggle": "Toggle task completion",
+    "DELETE /tasks/{id}": "Delete a task"
+  }
+}
+```
 
 ### Create Task
 **POST** `/tasks`

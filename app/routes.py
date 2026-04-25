@@ -6,6 +6,21 @@ from app.repository import TaskRepository
 app = Flask(__name__)
 service = TaskService(TaskRepository())
 
+@app.route("/", methods=["GET"])
+def welcome():
+    return jsonify({
+        "message": "Welcome to Task Management System API",
+        "version": "1.0.0",
+        "endpoints": {
+            "GET /": "This welcome message",
+            "GET /tasks": "List all tasks",
+            "POST /tasks": "Create a new task",
+            "GET /tasks/{id}": "Get a specific task",
+            "PATCH /tasks/{id}/toggle": "Toggle task completion",
+            "DELETE /tasks/{id}": "Delete a task"
+        }
+    }), 200
+
 @app.route("/tasks", methods=["POST"])
 def create_task():
     data = request.get_json()

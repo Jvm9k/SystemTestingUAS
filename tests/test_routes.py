@@ -15,6 +15,15 @@ def client():
         app.routes.service = TaskService(repo)
         yield client
 
+def test_welcome_endpoint(client):
+    resp = client.get("/")
+    assert resp.status_code == 200
+    data = resp.get_json()
+    assert "message" in data
+    assert "endpoints" in data
+    assert data["version"] == "1.0.0"
+    assert "GET /tasks" in data["endpoints"]
+
 def test_create_task(client):
     tomorrow = date.today() + timedelta(days=1)
     resp = client.post("/tasks", json={"title": "Test", "due_date": tomorrow.isoformat()})
