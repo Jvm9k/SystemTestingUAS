@@ -1,7 +1,3 @@
-# Task Management System
-
-A simple yet comprehensive task management REST API built with Flask, demonstrating modern software development practices including automated testing and continuous integration.
-
 ## Features
 
 - **Create Tasks**: Add new tasks with title and due date
@@ -11,34 +7,7 @@ A simple yet comprehensive task management REST API built with Flask, demonstrat
 - **Input Validation**: Comprehensive validation of task data
 - **Error Handling**: Meaningful error responses for invalid operations
 
-## Project Structure
-
-```
-.
-├── app/
-│   ├── __init__.py
-│   ├── model.py           # Data models
-│   ├── repository.py      # Data persistence layer (SQLite)
-│   ├── service.py         # Business logic layer
-│   └── routes.py          # Flask API endpoints
-├── tests/
-│   ├── __init__.py
-│   ├── test_service.py    # Unit tests (15+ test cases)
-│   └── test_routes.py     # Integration tests (10+ test cases)
-├── .github/
-│   └── workflows/
-│       └── ci.yml         # GitHub Actions CI/CD pipeline
-├── requirements.txt       # Python dependencies
-└── README.md
-```
-
 ## Installation & Setup
-
-### Prerequisites
-- Python 3.12+
-- pip (Python package manager)
-
-### Installation Steps
 
 1. Clone the repository:
 ```bash
@@ -159,7 +128,7 @@ Response (200):
   {
     "id": 1,
     "title": "Buy groceries",
-    "due_date": "2025-12-31",
+    "due_date": "2026-12-31",
     "completed": false
   },
   ...
@@ -173,7 +142,7 @@ Response (200):
 {
   "id": 1,
   "title": "Buy groceries",
-  "due_date": "2025-12-31",
+  "due_date": "2026-12-31",
   "completed": false
 }
 ```
