@@ -188,7 +188,6 @@ pytest tests/test_routes.py
 ```bash
 pytest -v
 ```
-```
 
 ## Testing Strategy
 
