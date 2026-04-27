@@ -11,7 +11,7 @@
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/SystemTestingUAS.git
+git clone https://github.com/Jvm9k/SystemTestingUAS.git
 cd SystemTestingUAS
 ```
 
