@@ -28,25 +28,6 @@ pip install -r requirements.txt
 
 ## Running the Application
 
-### Important: Activate Virtual Environment First
-
-Before running the app, activate the virtual environment:
-
-**On Windows (PowerShell):**
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-**On Windows (Command Prompt):**
-```cmd
-.venv\Scripts\activate
-```
-
-**On macOS/Linux:**
-```bash
-source venv/bin/activate
-```
-
 ### Quick Start (Recommended)
 Once the virtual environment is activated:
 ```bash
